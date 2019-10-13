@@ -56,4 +56,7 @@ handleData(data) {
     console.log('error:', error)
     return Observable.throw(error);
   }
+  ngOnDestroy() {
+  this.subscription.unsubscribe();
+}
 }
